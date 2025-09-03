@@ -1,7 +1,10 @@
 <template>
-  <section v-if="isLoading" class="flex flex-col justify-center items-center w-screen h-screen">
-    <h1 class="text-3xl">Espere por favor</h1>
-    <h3 class="animate-pulse">Cargando pokemons</h3>
+  <section
+    v-if="isLoading || randomPokemon?.id"
+    class="flex flex-col justify-center items-center w-screen h-screen"
+  >
+    <h1 class="text-3xl">Please wait</h1>
+    <h3 class="animate-pulse">Loading pokemons...</h3>
   </section>
 
   <section v-else class="flex flex-col justify-center items-center w-screen h-screen">
